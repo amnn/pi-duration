@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+*.tsbuildinfo
+.DS_Store
+
+# This project uses pnpm; do not commit lockfiles from other package managers.
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+bun.lock
+bun.lockb

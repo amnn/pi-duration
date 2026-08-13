@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    reviewers:
+      - amnn
+    allow:
+      - dependency-name: "@earendil-works/pi-*"
+    groups:
+      pi:
+        patterns:
+          - "@earendil-works/pi-*"

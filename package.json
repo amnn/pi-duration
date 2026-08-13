@@ -1,0 +1,66 @@
+{
+  "name": "pi-duration",
+  "version": "0.1.0",
+  "description": "Wall-clock and elapsed-time markers for Pi agent runs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amnn/pi-duration.git"
+  },
+  "homepage": "https://github.com/amnn/pi-duration#readme",
+  "bugs": {
+    "url": "https://github.com/amnn/pi-duration/issues"
+  },
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "duration",
+    "timer",
+    "timestamps",
+    "coding-agent"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "files": [
+    "index.ts",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.1",
+    "@earendil-works/pi-tui": "0.84.1",
+    "@types/node": "22.20.1",
+    "prettier": "3.3.3",
+    "tsx": "^4.23.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "test": "tsx --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write . --ignore-unknown",
+    "format:check": "prettier --check . --ignore-unknown",
+    "smoke": "pi --offline --no-extensions -e . --list-models __pi_package_smoke__",
+    "check": "pnpm run format:check && pnpm run typecheck && pnpm test && pnpm run smoke && pnpm audit",
+    "bump:patch": "pnpm version patch --no-git-tag-version --message \"chore(release): v%s\"",
+    "bump:minor": "pnpm version minor --no-git-tag-version --message \"chore(release): v%s\"",
+    "bump:major": "pnpm version major --no-git-tag-version --message \"chore(release): v%s\"",
+    "prepublishOnly": "pnpm check"
+  }
+}
