@@ -4,6 +4,14 @@ A [Pi](https://pi.dev) extension that adds timestamp and duration markers to
 the interactive transcript and shows a live elapsed-time counter in Pi's
 standard footer while the agent is working.
 
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/amnn/pi-duration/main/docs/assets/demo.gif"
+    alt="pi-duration showing timestamps and a live elapsed-time counter in Pi"
+    width="256"
+  />
+</p>
+
 For each accepted request, the extension records:
 
 - the local wall-clock time when work starts;
@@ -48,12 +56,7 @@ a local checkout, run `/reload` in Pi or restart it.
 
 The start marker is appended when the first assistant message for the request
 begins. The settled marker includes the elapsed duration and ending wall-clock
-time, for example:
-
-```text
-        14:22:03
-12.4s ⧖ 14:22:15
-```
+time.
 
 Narrow terminals retain the rightmost portion of transcript markers so the
 clock remains visible. The active timer decorates the first line of Pi's
