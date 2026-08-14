@@ -51,8 +51,8 @@ begins. The settled marker includes the elapsed duration and ending wall-clock
 time, for example:
 
 ```text
-                                   14:22:03
-                           12.4s ⧖ 14:22:15
+        14:22:03
+12.4s ⧖ 14:22:15
 ```
 
 Narrow terminals retain the rightmost portion of transcript markers so the
