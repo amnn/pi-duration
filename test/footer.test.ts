@@ -34,6 +34,9 @@ function createContext(): ExtensionContext {
     thinkingLevel: "off",
     sessionManager: {
       getEntries: () => [],
+      getEntryCount: () => 0,
+      getSessionId: () => "test-session",
+      getLeafId: () => null,
       getCwd: () => "/tmp/pi-duration",
       getSessionName: () => undefined,
     },
